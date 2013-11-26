@@ -1,14 +1,21 @@
 #!/bin/zsh
 # infect - Single file user configuration file distribution system
 # Written by Lowe Thiderman (lowe.thiderman@gmail.com)
-# https://github.com/thiderman/infect
+# Adopted by Anton Lazarev (tony@lazarew.me)
+# https://github.com/tonylazarew/infect
 # Licensed under the BSD license.
 
 # Preface {{{
 
 SELF=$0:a
 
-INFECT_HOST="http://infect.lazarew.me"
+if [[ "$(uname -s)" =~ 'Linux' ]]; then
+  # Curl on Debian/Ubuntu will not accept my awesome SSL certificate
+  INFECT_HOST="http://infect.lazarew.me"
+else
+  INFECT_HOST="https://infect.lazarew.me"
+fi
+
 INFECT_DIR="$HOME/.local/share/infect"
 INFECT_WEB_DIR="$HOME/www/infecta"
 INFECT_REMOTE_WEB_DIR="infect.lazarew.me:www/infecta"
