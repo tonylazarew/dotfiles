@@ -27,7 +27,7 @@ export EDITOR="vim"
 export VISUAL="vim"
 export HOMEBIN="$HOME/.local/bin"
 export BREWBIN="/usr/local/bin"
-local _PATH="$XDG_DATA_HOME/infect/util:$HOMEBIN:$BREWBIN
+local _PATH="$XDG_DATA_HOME/infect/util:$HOMEBIN:$BREWBIN"
 
 # Prevent trailing singlequotes to break the command lines! :D
 setopt sunkeyboardhack
