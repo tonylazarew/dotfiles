@@ -7,8 +7,8 @@
 XPTemplate priority=personal
 
 
-XPTvar $author       'Lowe Thiderman'
-XPTvar $email        'lowe.thiderman@gmail.com'
+XPTvar $author       'Anton Lazarev'
+XPTvar $email        'tony@lazarew.me'
 
 XPTvar $SPfun ''
 XPTvar $SParg ''
