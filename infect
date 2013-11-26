@@ -8,7 +8,7 @@
 
 SELF=$0:a
 
-INFECT_HOST="https://infect.lazarew.me"
+INFECT_HOST="http://infect.lazarew.me"
 INFECT_DIR="$HOME/.local/share/infect"
 INFECT_WEB_DIR="$HOME/www/infecta"
 INFECT_REMOTE_WEB_DIR="infect.lazarew.me:www/infecta"
