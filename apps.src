@@ -27,7 +27,9 @@ function post_infect_install() {
 
   if [[ $(git --version | grep 1.7 -c) = 1 ]]; then
     ext=""
-    if [[ "$(uname -s)" eq 'Darwin']]; then ext="''" fi
+    if [[ "$(uname -s)" =~ 'Darwin' ]]; then
+      ext="''"
+    fi
     sed -e "s/\[push\]//g" -e "s/\tdefault = simple//" -i$ext ~/.gitconfig
   fi
 }
