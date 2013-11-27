@@ -2,5 +2,6 @@ vim/.netrwhist
 *.pyc
 *.log
 old-configs-backup
+backup
 local
 infect.rc
