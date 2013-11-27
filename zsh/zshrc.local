@@ -60,8 +60,20 @@ if [[ $(echotc Co) = 256 ]]; then
   export ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=107,bold'
   export ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=107,bold'
 
+  # Need to do some discovery before actually using dircolors
+  if whence dircolors > /dev/null; then
+    _dircolors='dircolors'
+  elif whence gdircolors > /dev/null; then
+    # OS X homebrew version of coreutils has 'g' suffix for each command
+    _dircolors='gdircolors'
+  else
+    _dircolors=''
+  fi
+
   # Really extensive LS_COLORS.
-  eval $(dircolors -b $ZSHCONFDIR/modules/LS_COLORS/LS_COLORS)
+  if [[ -n $_dircolors ]]; then
+    eval $($_dircolors -b $ZSHCONFDIR/modules/LS_COLORS/LS_COLORS)
+  fi
 fi
 
 
