@@ -194,7 +194,7 @@ function _autoworkgit() {
     # XXX: Will not work with new-style submodules. Fak u submodules.
     if [[ ! -f $hook ]] && [[ -f $gerrit ]]; then
       print -P '%F{71}%BAuto%b%f: fak u gerrit'
-      cp --preserve=all $gerrit $hook
+      cp -p $gerrit $hook
     fi
   fi
 }
