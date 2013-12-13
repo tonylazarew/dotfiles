@@ -76,4 +76,4 @@
   rms         = !.git/bin/rms
 
 [push]
-  default = simple
+  default = upstream
